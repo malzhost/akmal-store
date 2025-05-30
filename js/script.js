@@ -92,17 +92,20 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         if (paymentMethod === 'dana') {
-            simulatedPaymentResponse.paymentDetails = 'Transfer ke VA DANA: 8888081234567890 an. AkunPro';
+            simulatedPaymentResponse.paymentDetails = 'Transfer ke VIA DANA: 089516142268 an. AkmalStore';
         } else if (paymentMethod === 'ovo') {
-            simulatedPaymentResponse.paymentDetails = 'Transfer ke VA OVO: 9999081234567890 an. AkunPro';
+            simulatedPaymentResponse.paymentDetails = 'Transfer ke VIA OVO: 085710795025 an. AkmalStore';
         } else if (paymentMethod === 'gopay') {
-            simulatedPaymentResponse.paymentDetails = 'Scan QR Code ini untuk GoPay (QR akan muncul di sini atau link ke halaman QR)';
+            simulatedPaymentResponse.paymentDetails = 'Transfer ke VIA GOPAY: 085773367326 an. AkmalStore';
+        } else if (paymentMethod === 'qris') {
+            simulatedPaymentResponse.paymentDetails = 'https://files.catbox.moe/1500yr.jpg';
             // Di sini Anda mungkin menampilkan QR code atau link ke QR
         } else {
             simulatedPaymentResponse.paymentDetails = 'Instruksi pembayaran akan dikirimkan ke email Anda.';
         }
 
-        // Tampilkan instruksi pembayaran
+        // Tampilkan instruksi 
+        
         if (simulatedPaymentResponse.success) {
             checkoutForm.style.display = 'none';
             paymentInstructions.style.display = 'block';
